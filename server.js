@@ -1,6 +1,13 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
+
+// Connect Database
+connectDB();
+
+// Init Middleware   {to accept body data  res.send(req.body);}
+app.use(express.json({ extended: false}));
 
 // After GET REQUEST "HELLO WORLD" 
 // app.get('/',(req,res) => res.send('Hello world'))
@@ -13,8 +20,6 @@ res.json({msg: 'Welcome to the contact keeper API........'}));
 app.use('/api/users',require('./routes/users'))
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/contacts',require('./routes/contacts'))
-
-
 //My INFOSHOT
 app.use('/api/infoshot',require('./routes/infoshot'))
 

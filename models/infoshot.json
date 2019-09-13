@@ -1,0 +1,295 @@
+{
+  "header": {
+    "id": "1",
+    "subjectQuestion": "Is  Osteopathy Genuine?",
+    "creatorUserId": "u1",
+    "defaultTemplateType": "3-column"
+  },
+  "users": [
+    {
+      "id": "1",
+      "name": "Sue Ayling",
+      "imageUrl": "img/faces/face-2-Mum.jpg",
+      "itemsSelected": [1,2,3,4,12,13,14]
+    },
+    {
+      "id": "2",
+      "name": "Nigel Ayling",
+      "imageUrl": "img/faces/face-1-Dad.jpg",
+      "itemsSelected": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+    }
+  ],
+
+  "article1": [
+    {
+      "id": 1,
+      "parentId": 0,
+      "divType": "divh1",
+      "textType": "h1",
+      "label": "Facts",
+      "linkUrl": "#",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "divType": "divh2",
+      "textType": "h2",
+      "label": "In Practice",
+      "linkUrl": "http://google.com",
+      "source": "Wikipedia",
+      "imageUrl": "https://www.pixelstalk.net/wp-content/uploads/2016/03/Amazing-Backgrounds-download-free.jpg",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 3,
+      "parentId": 2,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Osteopathic Manipulative Treatment in Action!",
+      "linkUrl": "https://www.youtube.com/watch?v=YWuG0DdBEEg",
+      "source": "Wikipedia",
+      "imageUrl": "https://source.unsplash.com/1600x900/?nature,water",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 4,
+      "parentId": 2,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Doctor of Osteopathic Medicine",
+      "linkUrl": "https://en.wikipedia.org/wiki/Doctor_of_Osteopathic_Medicine",
+      "source": "Wikipedia",
+      "imageUrl": "https://source.unsplash.com/1600x900/?medical",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 5,
+      "parentId": 1,
+      "divType": "divh2",
+      "textType": "h2",
+      "label": "Overview",
+      "linkUrl": "",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 6,
+      "parentId": 5,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "About Oseopathy",
+      "linkUrl": "https://en.wikipedia.org/wiki/Osteopathy",
+      "source": "Wikipedia",
+      "imageUrl": "https://source.unsplash.com/1600x900/?holistic,yoga,trees",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 8,
+      "parentId": 5,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Oseopathy Overview",
+      "linkUrl": "https://rationalwiki.org/wiki/Osteopathy",
+      "source": "rationalWiki",
+      "imageUrl": "https://source.unsplash.com/1600x900/?medical,Osteopathy,nature",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 9,
+      "parentId": 5,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Why the delayed acceptance by the medical community",
+      "linkUrl": "https://jaoa.org/article.aspx?articleid=2094563",
+      "source": "Journal of American Osteopaic Association",
+      "imageUrl": "https://source.unsplash.com/1600x900/?medical,Osteopathy,blue",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 10,
+      "parentId": 5,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "US Chiropracters by Country",
+      "linkUrl":"https://www.valuemd.com/osteopathic-medicine/29288-list-countries-trained-osteopaths-recognized.html",
+      "source": "Value MD",
+      "imageUrl": "https://source.unsplash.com/1600x900/?map",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 11,
+      "parentId": 5,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Safety and regulation of Osteopathy",
+      "linkUrl":"https://www.nhs.uk/conditions/osteopathy/safety",
+      "source": "National Health Service UK",
+      "imageUrl": "https://source.unsplash.com/1600x900/?medical,Osteopathy,science",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 12,
+      "parentId": 1,
+      "divType": "divh2",
+      "textType": "h2",
+      "label": "Papers",
+      "linkUrl":"",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 13,
+      "parentId": 12,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Google Scholar articles on Osteopathy",
+      "linkUrl":"https://scholar.google.no/scholar?q=evidence+of+the+efficacy+Osteopathic&hl=en&as_sdt=0&as_vis=1&oi=scholart",
+      "source": "",
+      "imageUrl": "https://source.unsplash.com/1600x900/?medical,science,test",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    },
+    {
+      "id": 14,
+      "parentId": 12,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Benchmarks for training Osteopathy",
+      "linkUrl":"http://apps.who.int/medicinedocs/documents/s17555en/s17555en.pdf",
+      "source": "World Health Organisation",
+      "imageUrl": "https://source.unsplash.com/1600x900/?chiropracter,science,test",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio sequi aliquid nisi aspernatur inventore incidunt non eligendi. Quis, eum!"
+    }
+  ],
+  "article2": [
+    {
+      "id": 15,
+      "parentId": 0,
+      "divType": "divh1",
+      "textType": "h1",
+      "label": "FOR",
+      "linkUrl": "#",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 16,
+      "parentId": 15,
+      "divType": "divh2",
+      "textType": "h2",
+      "label": "Editorial",
+      "linkUrl": "#",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 17,
+      "parentId": 16,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Does Osteopathy work?",
+      "linkUrl": "http://theconversation.com/does-osteopathy-work-98848",
+      "source": "theconversation.com",
+      "imageUrl": "https://source.unsplash.com/1600x900/?cars, boats",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 18,
+      "parentId": 15,
+      "divType": "divh2",
+      "textType": "h2",
+      "label": "Studies",
+      "linkUrl": "#",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 19,
+      "parentId": 18,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Osteopathic manipulative treatment for nonspecific low back pain",
+      "linkUrl": "https://www.ncbi.nlm.nih.gov/pubmed/25175885",
+      "source": "NCBI",
+      "imageUrl": "https://source.unsplash.com/1600x900/?science, hospital, pain",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 20,
+      "parentId": 18,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Osteopathic manipulative treatment for nonspecific neck pain",
+      "linkUrl": "https://www.ncbi.nlm.nih.gov/pubmed/25175885",
+      "source": "NCBI",
+      "imageUrl": "https://source.unsplash.com/1600x900/?yoga",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    }
+
+  ],
+  "article3": [
+    {
+      "id": 21,
+      "parentId": 0,
+      "divType": "divh1",
+      "textType": "h1",
+      "label": "AGAINST",
+      "linkUrl": "#",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 22,
+      "parentId": 21,
+      "divType": "divh2",
+      "textType": "h2",
+      "label": "Studies",
+      "linkUrl": "#",
+      "source": "",
+      "imageUrl": "",
+      "preview-text": ""
+    },
+    {
+      "id": 23,
+      "parentId": 21,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Evidence of the efficacy of cranial osteopathy in football",
+      "linkUrl": "https://bjsm.bmj.com/content/51/4/400.2",
+      "source": "theconversation.com",
+      "imageUrl": "https://source.unsplash.com/1600x900/?football, sport",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 24,
+      "parentId": 21,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Osteopathy its not all its cracked up to be",
+      "linkUrl": "https://edzardernst.com/2018/11/osteopathy-not-all-its-cracked-up-to-be/",
+      "source": "Blog",
+      "imageUrl": "https://source.unsplash.com/1600x900/?facts, fake, maths",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    },
+    {
+      "id": 25,
+      "parentId": 21,
+      "divType": "divLinkBox",
+      "textType": "linkBox",
+      "label": "Dangers risks and side effects from Osteopathy",
+      "linkUrl": "https://www.onlymyhealth.com/dangers-risks-and-side-effects-from-osteopathy-1419065916",
+      "source": "Blog",
+      "imageUrl": "https://source.unsplash.com/1600x900/?facts, fake, maths",
+      "preview-text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet facere nam nemo explicabo, tempora expedita at asperiores labore minima?"
+    }
+  ]
+
+}
