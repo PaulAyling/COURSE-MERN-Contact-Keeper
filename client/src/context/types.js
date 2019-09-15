@@ -1,3 +1,4 @@
+// Contacts
 export const ADD_CONTACT = 'ADD_CONTACT';
 export const DELETE_CONTACT = 'DELETE_CONTACT';
 export const SET_CURRENT = 'SET_CURRENT';
@@ -7,3 +8,14 @@ export const FILTER_CONTACTS = 'FILTER_CONTACTS';
 export const CLEAR_FILTER = 'CLEAR_FILTER';
 export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
+
+//Infoshots
+export const ADD_INFOSHOT = 'ADD_INFOSHOT';
+export const DELETE_INFOSHOT = 'DELETE_INFOSHOT';
+// export const SET_CURRENT = 'SET_CURRENT'; // NOT SURE IF THESE ARE CONTACT SPECIFIC
+// export const CLEAR_CURRENT = 'CLEAR_CURRENT';
+export const UPDATE_INFOSHOT = 'UPDATE_INFOSHOT';
+export const FILTER_INFOSHOTS = 'FILTER_INFOSHOTS';
+// export const CLEAR_FILTER = 'CLEAR_FILTER';
+// export const SET_ALERT = 'SET_ALERT';
+// export const REMOVE_ALERT = 'REMOVE_ALERT';

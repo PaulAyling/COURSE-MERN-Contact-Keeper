@@ -1,5 +1,5 @@
 import React from 'react'
-import Contacts from '../contacts/Contacts';
+import Infoshots from '../infoshots/Infoshots';
 const Home = () => {
   return (
       <div className = "grid-2">
@@ -8,7 +8,7 @@ const Home = () => {
 
       </div>
       <div>
-        <Contacts />
+        <Infoshots />
       </div>
     </div>
 
@@ -17,4 +17,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Infoshots

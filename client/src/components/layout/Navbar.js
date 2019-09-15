@@ -19,6 +19,9 @@ const Navbar = ({title, icon}) => {
         <li>
           <Link to='/myinfoshots'>My Infoshots</Link>
         </li>
+        <li>
+          <Link to='/infoshots'>See Infoshots</Link>
+        </li>
       </ul>
     </div>
   )
@@ -30,8 +33,8 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-  title: 'Contact Keeper',
-  icon: 'fas fa-id-card-alt'
+  title: 'INFOSHOT',
+  icon: 'fas fa-bullseye'
 }
 
 export default Navbar
