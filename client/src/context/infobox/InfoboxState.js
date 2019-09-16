@@ -8,7 +8,9 @@ import {
   DELETE_INFOBOX,
   SET_CURRENT_INFOBOX,
   CLEAR_CURRENT_INFOBOX,
-  UPDATE_INFOBOX
+  UPDATE_INFOBOX,
+  FILTER_INFOBOXES,
+  CLEAR_FILTER_INFOBOX
 
 } from '../types';
 
@@ -75,7 +77,8 @@ const InfoboxState = props => {
         'preview-text': ''
       }
     ],
-    current:null
+    current:null,
+    filtered: null
   };
 
   const [state, dispatch] = useReducer(InfoboxReducer, initialState);
@@ -106,19 +109,28 @@ const InfoboxState = props => {
   };
   
   // Filter Contacts
-
+  const filterInfoboxes = text => {
+    dispatch({ type: FILTER_INFOBOXES, payload: text });
+  };
+  
   // Clear Filter
-
+  const clearFilterInfobox = () => {
+    dispatch({ type: CLEAR_FILTER_INFOBOX  });
+    
+  };
   return (
     <InfoboxContext.Provider
       value={{
         infoboxes: state.infoboxes,
         current: state.current,
+        filtered:state.filtered,
         addInfobox,
         deleteInfobox,
         setCurrentInfobox,
         clearCurrentInfobox,
-        updateInfobox
+        updateInfobox,
+        filterInfoboxes,
+        clearFilterInfobox
 
       }}>
       {props.children}

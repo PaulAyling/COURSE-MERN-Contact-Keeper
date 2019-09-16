@@ -3,7 +3,9 @@ import {
   DELETE_INFOBOX,
   SET_CURRENT_INFOBOX,
   CLEAR_CURRENT_INFOBOX,
-  UPDATE_INFOBOX
+  UPDATE_INFOBOX,
+  FILTER_INFOBOXES,
+  CLEAR_FILTER_INFOBOX
 } from '../types';
 
 export default (state, action) => {
@@ -36,6 +38,19 @@ export default (state, action) => {
       return {
         ...state,
         current: null
+      };
+    case FILTER_INFOBOXES:
+      return {
+        ...state,
+        filtered: state.infoboxes.filter(infobox => {
+          const regex = new RegExp(`${action.payload}`, 'gi');
+          return infobox.label.match(regex) || infobox.linkUrl.match(regex);
+        })
+      };
+      case CLEAR_FILTER_INFOBOX:
+      return{
+        ...state,
+        filtered:null
       };
     default:
       return state;
