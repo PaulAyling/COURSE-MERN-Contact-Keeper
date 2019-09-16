@@ -28,9 +28,14 @@ const InfoshotSchema = mongoose.Schema({
     itemsSelected: Array
   },
   main: {
-    parentId: {
-      type: Number
-    }
+    parentId: Number,
+    divType: String,
+    textType: String,
+    label: String,
+    linkUrl: String,
+    source: String,
+    imageUrl: String,
+    previewText: String
   }
 });
 

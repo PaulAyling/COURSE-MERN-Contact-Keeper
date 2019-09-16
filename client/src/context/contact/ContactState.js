@@ -15,56 +15,76 @@ import {
 
 const ContactState = props => {
   const initialState = {
-    contacts:[
+    contacts: [
       {
-        id:1,
-        name:'Paul Ayling',
-        email:'paul@smith.com',
-        phone:'213213432',
-        type:'personal'
+        id: 1,
+        name: 'Paul Ayling',
+        email: 'paul@smith.com',
+        phone: '213213432',
+        type: 'personal'
       },
       {
-        id:2,
-        name:'Bob Smith',
-        email:'Bob@smith.com',
-        phone:'999999999',
-        type:'personal'
+        id: 2,
+        name: 'Bob Smith',
+        email: 'Bob@smith.com',
+        phone: '999999999',
+        type: 'personal'
       },
       {
-        id:3,
-        name:'Ayn Rand',
-        email:'ayn@smith.com',
-        phone:'22222222',
-        type:'professional'
+        id: 3,
+        name: 'Ayn Rand',
+        email: 'ayn@smith.com',
+        phone: '22222222',
+        type: 'professional'
       }
-    ]
+    ],
+    current: null
   };
-const[state, dispatch]= useReducer(ContactReducer, initialState);
+  const [state, dispatch] = useReducer(ContactReducer, initialState);
 
-//Add Contact
+  //Add Contact
+  const addContact = contact => {
+    contact.id = uuid.v4();
+    dispatch({ type: ADD_CONTACT, payload: contact });
+  };
 
-// Delete Contact
+  // Delete Contact
+  const deleteContact = id => {
+    dispatch({ type: DELETE_CONTACT, payload: id });
+  };
 
-// Set Current Contact
+  // Set Current Contact
+  const setCurrent = contact => {
+    dispatch({ type: SET_CURRENT, payload: contact });
+  };
+  // Clear Current Contact
+  const clearCurrent = () => {
+    dispatch({ type: CLEAR_CURRENT });
+  };
 
-// Clear Current Contact
+  // Update Contact
+  const updateContact = contact => {
+    dispatch({ type: UPDATE_CONTACT, payload: contact });
+  };
 
-// Update Contact
+  // Filter Contacts
 
-// Filter Contacts
+  // Clear Filter
 
-// Clear Filter
-
-return (
-  <ContactContext.Provider
-    value={{
-      contacts:state.contacts
-    }}
-    >
-    { props.children}
-  </ContactContext.Provider>
-);
-
+  return (
+    <ContactContext.Provider
+      value={{
+        contacts: state.contacts,
+        current: state.current,
+        addContact,
+        deleteContact,
+        setCurrent,
+        clearCurrent,
+        updateContact
+      }}>
+      {props.children}
+    </ContactContext.Provider>
+  );
 };
 
 export default ContactState;

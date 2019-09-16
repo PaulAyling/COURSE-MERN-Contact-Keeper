@@ -48,7 +48,14 @@ router.post(
       users: imageUrl,
       users: itemsCreated,
       users: itemsSelected,
-      main: parentId
+
+      main: parentId,
+      main: divType,
+      main: textType,
+      main: label,
+      main: linkUrl,
+      main: source,
+      main: previewText
     } = req.body;
     try {
       const newInfoshot = new Infoshot({
@@ -61,7 +68,14 @@ router.post(
         users: imageUrl,
         users: itemsCreated,
         users: itemsSelected,
-        main: parentId
+
+        main: parentId,
+        main: divType,
+        main: textType,
+        main: label,
+        main: linkUrl,
+        main: source,
+        main: previewText
       });
 
       const infoshot = await newInfoshot.save();
