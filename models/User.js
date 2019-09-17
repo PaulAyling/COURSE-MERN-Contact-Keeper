@@ -16,7 +16,7 @@ const UserSchema = mongoose.Schema({
   },
   imageUrl: {
     type: String,
-    required: true
+    required: false
   },
   infoshotsIds: {
     type: Array,
