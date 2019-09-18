@@ -29,6 +29,7 @@ const AuthState = props => {
   const loadUser = async () => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
+      console.log(setAuthToken)
     }
 
     try {
@@ -39,7 +40,8 @@ const AuthState = props => {
         payload: res.data
       });
     } catch (err) {
-      console.log('auth_error involked');
+      console.log('AUTH_ERROR involked line 42 AUthState');
+      console.log(err);
       dispatch({
         type: AUTH_ERROR
       });
@@ -54,13 +56,13 @@ const AuthState = props => {
       }
     };
     try {
-      const res = await axios.post('api/users', formData, config);
+      const res = await axios.post('/api/users', formData, config);
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data
       });
 
-      loadUser();
+      // loadUser();
     } catch (err) {
       dispatch({
         type: REGISTER_FAIL,
@@ -69,10 +71,31 @@ const AuthState = props => {
     }
   };
   // Login User
-  const login = () => console.log('login user');
+  // register User
+  const login = async formData => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+    try {
+      const res = await axios.post('/api/auth', formData, config);
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: res.data
+      });
+
+      loadUser();
+    } catch (err) {
+      dispatch({
+        type: LOGIN_FAIL,
+        payload: err.response.data.msg
+      });
+    }
+  };
 
   // Logout
-  const logout = () => console.log('logout user');
+  const logout = () => dispatch({ type: LOGOUT});
 
   // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
