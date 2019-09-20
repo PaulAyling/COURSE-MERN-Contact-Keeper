@@ -1,0 +1,30 @@
+{
+  "infoboxes": [
+    [
+      {
+        "_id": "5d8348964feb720a22c10b66",
+        "linkUrl": "www.google.com",
+        "label": "link1",
+        "user": "5d81fc59fedc482ed2b9eaa6",
+        "__v": 0
+      },
+      {
+        "_id": "5d834e88c3079b0f3c8b316c",
+        "linkUrl": "www.google.com",
+        "label": "link1",
+        "user": "5d81fc59fedc482ed2b9eaa6",
+        "__v": 0
+      },
+      {
+        "_id": "5d834e89c3079b0f3c8b316d",
+        "linkUrl": "www.google.com",
+        "label": "link1",
+        "user": "5d81fc59fedc482ed2b9eaa6",
+        "__v": 0
+      }
+    ]
+  ],
+  "current": null,
+  "filtered": null,
+  "error": null
+}

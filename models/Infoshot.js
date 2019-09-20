@@ -1,41 +1,17 @@
 const mongoose = require('mongoose');
 
 const InfoshotSchema = mongoose.Schema({
-  OwnerUserId: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'users'
   },
-  subjectQuestion: {
+  label: {
     type: String,
-    required: true,
-    default: 'Should I............?'
+    required: true
   },
-  defaultTemplateType: {
+  linkUrl: {
     type: String,
-    required: true,
-    default: '3-column'
-  },
-  date: {
-    type: Date,
-    required: true,
-    default: Date.now
-  },
-  users: {
-    id: Number,
-    name: String,
-    imageUrl: String,
-    itemsCreated: Array,
-    itemsSelected: Array
-  },
-  main: {
-    parentId: Number,
-    divType: String,
-    textType: String,
-    label: String,
-    linkUrl: String,
-    source: String,
-    imageUrl: String,
-    previewText: String
+    required: true
   }
 });
 

@@ -1,4 +1,5 @@
 import {
+  GET_INFOBOXES,
   ADD_INFOBOX,
   DELETE_INFOBOX,
   SET_CURRENT_INFOBOX,
@@ -6,29 +7,48 @@ import {
   UPDATE_INFOBOX,
   FILTER_INFOBOXES,
   CLEAR_FILTER_INFOBOX,
-  INFOBOX_ERROR
+  INFOBOX_ERROR,
+  CLEAR_INFOBOX
 } from '../types';
 
 export default (state, action) => {
   switch (action.type) {
+    case GET_INFOBOXES:
+      return {
+        ...state,
+        infoboxes: action.payload,
+        loading: false
+      };
+
     case ADD_INFOBOX:
       return {
         ...state,
-        infoboxes: [...state.infoboxes, action.payload]
+        infoboxes: [action.payload, ...state.infoboxes],
+        loading: false
       };
     case UPDATE_INFOBOX:
       return {
         ...state,
         infoboxes: state.infoboxes.map(infobox =>
-          infobox.id === action.payload.id ? action.payload : infobox
-        )
+          infobox._id === action.payload._id ? action.payload : infobox
+        ),
+        loading: false
       };
     case DELETE_INFOBOX:
       return {
         ...state,
         infoboxes: state.infoboxes.filter(
-          infoboxes => infoboxes.id !== action.payload
-        )
+          infoboxes => infoboxes._id !== action.payload
+        ),
+        loading: false
+      };
+    case CLEAR_INFOBOX:
+      return {
+        ...state,
+        contacts: null,
+        filtered: null,
+        error: null,
+        current: null
       };
     case SET_CURRENT_INFOBOX:
       return {
@@ -48,16 +68,16 @@ export default (state, action) => {
           return infobox.label.match(regex) || infobox.linkUrl.match(regex);
         })
       };
-      case CLEAR_FILTER_INFOBOX:
-      return{
+    case CLEAR_FILTER_INFOBOX:
+      return {
         ...state,
-        filtered:null
+        filtered: null
       };
-      case INFOBOX_ERROR:
-      return{
+    case INFOBOX_ERROR:
+      return {
         ...state,
-        error:action.payload
-      }
+        error: action.payload
+      };
     default:
       return state;
   }

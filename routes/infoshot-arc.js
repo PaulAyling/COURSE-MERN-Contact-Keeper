@@ -1,25 +1,23 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
-
 const { check, validationResult } = require('express-validator');
 const User = require('../models/User');
 
 const Infoshot = require('../models/Infoshot');
 
-//@route    GET  api/infoshots
-//@desc     Get all user infoshots
+//@route    GET  api/contacts
+//@desc     Get all infoshotscontacts
 // @access  Private
 router.get('/', auth, async (req, res) => {
   try {
-    const infoshot = await Infoshot.find({ user: req.user.id }).sort({
+    const infoshot = await Infoshot.find({ OwnerUserId: req.user.id }).sort({
       date: -1
     });
     res.json(infoshot);
-    console.log('Infoshot.js has passed the data');
   } catch (err) {
     console.error(err.message);
-    res.status(500).send('Server Error: In Infoshot.js');
+    res.status(500).send('Server Error');
   }
 });
 
@@ -31,7 +29,7 @@ router.post(
   [
     auth,
     [
-      check('linkUrl', ' Infoshot link is required')
+      check('subjectQuestion', ' Infoshot question is required')
         .not()
         .isEmpty()
     ]
@@ -42,18 +40,49 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { linkUrl, label } = req.body;
+    const {
+      subjectQuestion,
+      defaultTemplateType,
+      users: id,
+      users: name,
+      users: imageUrl,
+      users: itemsCreated,
+      users: itemsSelected,
+
+      main: parentId,
+      main: divType,
+      main: textType,
+      main: label,
+      main: linkUrl,
+      main: source,
+      main: previewText
+    } = req.body;
     try {
       const newInfoshot = new Infoshot({
-        linkUrl,
-        label,
-        user: req.user.id
+        subjectQuestion,
+        defaultTemplateType,
+        OwnerUserId: req.user.id,
+        ContributorUserID: req.user.id,
+        users: id,
+        users: name,
+        users: imageUrl,
+        users: itemsCreated,
+        users: itemsSelected,
+
+        main: parentId,
+        main: divType,
+        main: textType,
+        main: label,
+        main: linkUrl,
+        main: source,
+        main: previewText
       });
 
       const infoshot = await newInfoshot.save();
 
       res.json(infoshot);
     } catch (err) {
+      console.error(err.message);
       res.status(500).send('Server Error2');
     }
   }
@@ -63,22 +92,22 @@ router.post(
 //@desc     update a contact
 // @access  Private
 router.put('/:id', auth, async (req, res) => {
-  const { label, linkUrl } = req.body;
+  const { subjectQuestion, defaultTemplateType } = req.body;
 
   //Build a contact object
   const infoshotFields = {};
-  if (label) infoshotFields.label = label;
-  if (linkUrl) infoshotFields.linkUrl = linkUrl;
+  if (subjectQuestion) infoshotFields.subjectQuestion = subjectQuestion;
+  if (defaultTemplateType)
+    infoshotFields.defaultTemplateType = defaultTemplateType;
   try {
     let infoshot = await Infoshot.findById(req.params.id);
 
     if (!infoshot) return res.status(404).json({ msg: 'Infoshot not found' });
 
     // Make sure user owns contact
-    if (infoshot.user.toString() !== req.user.id) {
+    if (infoshot.OwnerUserId.toString() !== req.user.id) {
       return res.status(401).json({ msg: 'Not authorized' });
     }
-    console.log('Infoshots are authorzed by user')
     infoshot = await Infoshot.findByIdAndUpdate(
       req.params.id,
       { $set: infoshotFields },

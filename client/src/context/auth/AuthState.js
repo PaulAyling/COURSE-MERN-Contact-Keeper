@@ -29,7 +29,6 @@ const AuthState = props => {
   const loadUser = async () => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
-      console.log(setAuthToken)
     }
 
     try {
@@ -40,8 +39,6 @@ const AuthState = props => {
         payload: res.data
       });
     } catch (err) {
-      console.log('AUTH_ERROR involked line 42 AUthState');
-      console.log(err);
       dispatch({
         type: AUTH_ERROR
       });

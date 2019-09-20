@@ -2,18 +2,19 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import InfoboxContext from '../../context/infobox/infoboxContext';
 
-const InfoboxItem = ({ infobox }) => {
+const InfoboxItem = ({ infoshot }) => {
   const infoboxContext = useContext(InfoboxContext);
+
   const {
     deleteInfobox,
     setCurrentInfobox,
     clearCurrentInfobox
   } = infoboxContext;
 
-  const { id, label, linkUrl } = infobox;
+  const { _id, label, linkUrl } = infoshot;
 
   const onDelete = () => {
-    deleteInfobox(id);
+    deleteInfobox(_id);
     clearCurrentInfobox();
   };
 
@@ -27,7 +28,7 @@ const InfoboxItem = ({ infobox }) => {
       <p>
         <button
           className='btn btn-dark dbt-sm'
-          onClick={() => setCurrentInfobox(infobox)}>
+          onClick={() => setCurrentInfobox(infoshot)}>
           Edit
         </button>
         <button className='btn btn-danger dbt-sm' onClick={onDelete}>
@@ -35,7 +36,6 @@ const InfoboxItem = ({ infobox }) => {
         </button>
       </p>
     </div>
-
   );
 };
 

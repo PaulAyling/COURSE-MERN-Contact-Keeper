@@ -13,6 +13,7 @@ const InfoboxEdit = () => {
       </div>
       <div>
         <InfoboxFilter />
+        {/* THIS IS WHERE THE PROBLEM IS */}
         <Infoboxes />
       </div>
     </div>

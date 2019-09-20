@@ -13,8 +13,6 @@ import ContactState from './context/contact/ContactState';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
 
-import Infoboxes from './components/pages/Infoboxes';
-import MyInfoboxes from './components/pages/MyInfoboxes';
 import InfoboxEdit from './components/pages/InfoboxEdit';
 import InfoboxState from './context/infobox/InfoboxState';
 import setAuthToken from './utils/setAuthToken';
@@ -41,9 +39,7 @@ const App = () => {
                     <Route exact path='/register' component={Register} />
                     <Route exact path='/login' component={Login} />
 
-                    <PrivateRoute exact path='/myinfoboxes' component={MyInfoboxes} />
-                    <Route exact path='/infoboxes' component={Infoboxes} />
-                    <Route exact path='/infoboxedit' component={InfoboxEdit} />
+                    <PrivateRoute exact path='/infoboxedit' component={InfoboxEdit} />
                   </Switch>
                 </div>
               </Fragment>
