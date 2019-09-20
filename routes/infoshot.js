@@ -101,7 +101,7 @@ router.delete('/:id', auth, async (req, res) => {
     if (!infoshot) return res.status(404).json({ msg: 'Contact not found' });
 
     // Make sure user owns infoshot
-    if (infoshot.OwnerUserId.toString() !== req.user.id) {
+    if (infoshot.user.toString() !== req.user.id) {
       return res.status(401).json({ msg: 'Not authorized' });
     }
 

@@ -19,6 +19,11 @@ const ContactForm = () => {
     }
   }, [contactContext, current]);
 
+
+
+
+
+  
   const [contact, setContact] = useState({
     name: '',
     email: '',

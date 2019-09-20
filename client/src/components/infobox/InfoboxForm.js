@@ -3,12 +3,8 @@ import InfoboxContext from '../../context/infobox/infoboxContext';
 
 const InfoboxForm = () => {
   const infoboxContext = useContext(InfoboxContext);
-
-  const {
-    addInfobox,
-    updateInfobox,
-    current,
-    clearCurrentInfobox
+  
+  const { addInfobox, updateInfobox, current,clearCurrentInfobox
   } = infoboxContext;
 
   useEffect(() => {
@@ -21,6 +17,8 @@ const InfoboxForm = () => {
       });
     }
   }, [infoboxContext, current]);
+
+
 
   const [infobox, setInfobox] = useState({
     label: '',

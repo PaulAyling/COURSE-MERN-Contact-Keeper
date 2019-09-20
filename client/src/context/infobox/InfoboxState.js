@@ -57,8 +57,16 @@ const InfoboxState = props => {
   const deleteInfobox = async id => {
     try {
       await axios.delete(`/api/infoshot/${id}`);
+
       dispatch({ type: DELETE_INFOBOX, payload: id });
     } catch (err) {
+      console.log('there was an error here');
+      console.log('THis is the value in the ID: ' + id);
+      console.log(
+        'DELETE_INFOBOX: ' + console.log(JSON.stringify(state.infoboxes))
+      );
+
+
       dispatch({ type: INFOBOX_ERROR, payload: err.response.msg });
     }
   };
