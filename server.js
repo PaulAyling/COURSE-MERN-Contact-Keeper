@@ -10,14 +10,6 @@ connectDB();
 // Init Middleware   {to accept body data  res.send(req.body);}
 app.use(express.json({ extended: false }));
 
-// After GET REQUEST "HELLO WORLD"
-// app.get('/',(req,res) => res.send('Hello world'))
-
-// After GET REQUEST JSON file delivered
-app.get('/', (req, res) =>
-  res.json({ msg: 'Welcome to the contact keeper API........' })
-);
-
 // Define routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
